@@ -10,7 +10,7 @@ InputList = React.createClass({
   handleInput: function(evt) {
     if(evt.keyCode == 13) {
       if (this.state.userInput) {
-        Hellos.insert({hello: this.state.userInput});
+        Hellos.insert({hello: this.state.userInput, createdAt: new Date().valueOf()});
         this.setState({userInput: ''});
       }
     }

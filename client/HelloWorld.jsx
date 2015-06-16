@@ -3,7 +3,7 @@ HelloWorld = React.createClass({
 
   getReactiveState: function() {
     return {
-      hw: Hellos.find().fetch()
+      hw: Hellos.find({}, {sort: {createdAt: -1}, limit: 25}).fetch()
     };
   },
 
