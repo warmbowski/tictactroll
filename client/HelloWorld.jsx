@@ -20,7 +20,7 @@ HelloWorld = React.createClass({
     var self = this;
     var listItems = this.state.hw.map(function(item) {
       return (<li key={item._id}>
-        <a className="delete" href="#" onClick={self.handleClick.bind(null, item._id)}>x</a> Hello {item.hello}
+        <a className="delete" href="#" onClick={self.handleClick.bind(self, item._id)}>x</a> Hello {item.hello}
       </li>);
     });
     return (
