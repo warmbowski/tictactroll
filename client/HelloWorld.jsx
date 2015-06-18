@@ -1,9 +1,13 @@
 HelloWorld = React.createClass({
-  mixins: [ ReactiveMixin ],
+  mixins: [ DDPMixin, ReactiveMixin ],
+  
+  subscriptions: function() {
+    return Meteor.subscribe('allHellos');
+    },
 
   getReactiveState: function() {
     return {
-      hw: Hellos.find({}, {sort: {createdAt: -1}, limit: 25}).fetch()
+      hw: Hellos.find({}, {sort: {createdAt: -1}}).fetch()
     };
   },
 
