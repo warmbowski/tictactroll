@@ -5,8 +5,11 @@ Meteor.publish('allHellos', function() {
 });
 
 Hellos.allow({
-  //allows
   insert: function(userId, doc) {
     return (doc.hello !== '');
+  },
+
+  remove: function(userId, doc) {
+    return true;
   }
 });
