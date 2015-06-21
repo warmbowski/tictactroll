@@ -10,3 +10,7 @@ ul#hellos li:hover a.delete{
 a.delete {
   visibility: hidden;
 }
+
+.grid {
+  background-color: gray;
+}

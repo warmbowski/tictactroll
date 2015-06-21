@@ -24,9 +24,12 @@ HelloWorld = React.createClass({
       </li>);
     });
     return (
-      <ul id="hellos">
-        {listItems}
-      </ul>
+      <div>
+        <ul id="hellos">
+          {listItems}
+        </ul>
+        <Grid />
+      </div>
     );
   }
 });
