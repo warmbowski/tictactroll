@@ -7,8 +7,7 @@ Xmarker = React.createClass({
         y2 : "75",
         strokeWidth : "6",
         stroke : "black",
-        strokeLinecap: "round",
-        transform: "translate(10 10) rotate(0 0 0)"
+        strokeLinecap: "round"
     };
 
     var horizontalLine2 = {
@@ -18,11 +17,10 @@ Xmarker = React.createClass({
         y2 : "10",
         strokeWidth : "6",
         stroke : "black",
-        strokeLinecap: "round",
-        transform: "translate(10 10) rotate(0 0 0)"
+        strokeLinecap: "round"
     };
     return (
-      <g>
+      <g transform="translate(10 10)">
         <Line 
           x1={horizontalLine1.x1}
           x2={horizontalLine1.x2}
