@@ -2,7 +2,7 @@ InvisibleGrid = React.createClass({
 
   handleClick: function(e) {
     e.preventDefault();
-    this.props.handleClick(e.target.id);
+    this.props.handleClick(e);
   },
 
   render: function() {

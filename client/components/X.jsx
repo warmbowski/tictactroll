@@ -1,4 +1,11 @@
 Xmarker = React.createClass({
+  getDefaultProps: function() {
+    return {
+      translateX: '10',
+      translateY: '10'
+    };
+  },
+
   render: function() {
     var horizontalLine1 = {
         x1 : "10",
@@ -19,8 +26,11 @@ Xmarker = React.createClass({
         stroke : "black",
         strokeLinecap: "round"
     };
+
+    var translate = "translate(" + this.props.translateX + " " + this.props.translateY + ")";
+
     return (
-      <g transform="translate(10 10)">
+      <g transform={translate}>
         <Line 
           x1={horizontalLine1.x1}
           x2={horizontalLine1.x2}
