@@ -12,7 +12,6 @@ HelloWorld = React.createClass({
   },
   
   handleClick: function(key) {
-    console.log(key);
     return Hellos.remove({_id: key});
   },
 
