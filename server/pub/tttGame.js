@@ -1,5 +1,3 @@
-TTTGames = new Mongo.Collection('ttt-game');
-
 Meteor.publish('myGame', function() {
   return TTTGames.find();
 });
