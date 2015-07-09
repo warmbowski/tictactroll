@@ -1,15 +1,4 @@
 /* CSS declarations go here */
-ul#hellos li {
-  list-style: none;
-}
-
-ul#hellos li:hover a.delete{
-  visibility: visible;
-}
-
-a.delete {
-  visibility: hidden;
-}
 
 .grid {
   background-color: gray;

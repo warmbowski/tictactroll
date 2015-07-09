@@ -11,10 +11,7 @@ Grid = React.createClass({
     };
   },
 
-  handleClick: function(value) {
-    var square = _.clone(value.target.id);
-    console.log(square)
-    //console.log('handleClick', value, value.target);
+  handleClick: function(square) {
     this.handleUpdateSquare(square - 1);
   },
 
@@ -66,7 +63,7 @@ Grid = React.createClass({
         <InvisibleGrid handleClick={this.handleClick} />
         <Svg className="grid" height="300" width="300">
         <Lines />
-        {markerList}
+          {markerList}
         </Svg>
       </div>
     );

@@ -16,7 +16,7 @@ Omarker = React.createClass({
     var translate = "translate(" + this.props.translateX + " " + this.props.translateY + ")";
 
     return (
-      <g stroke="black" fill="white" strokeWidth="5" transform={translate}>
+      <g stroke="black" fill="gray" strokeWidth="5" transform={translate}>
         <circle cx={circle.cx} cy={circle.cy} r={circle.r} />
       </g>
     );
