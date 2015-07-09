@@ -21,8 +21,23 @@ Grid = React.createClass({
   handleUpdateSquare: function(position) {
     var property = 'positions.' + position + '.value';
     var setting = {};
-    setting[property] = 'x';
-    var action = {$set: setting};
+    var action;
+      
+    if (this.state.myGameGrid.moves.pop() !== 'x') {
+      if (this.state.myGameGrid.positions[position].value === '') {
+        setting[property] = 'x';
+      } else {
+        setting[property] = '';
+      }
+    } else {
+      if (this.state.myGameGrid.positions[position].value === '') {
+        setting[property] = 'o';
+      } else {
+        setting[property] = '';
+      }
+    }
+    
+    action = {$set: setting, $push: {moves: setting[property]}};
 
     TTTGames.update(
       {_id: this.state.myGameGrid._id},
